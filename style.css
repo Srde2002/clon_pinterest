@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium
+  }
+  
+  :root {
+    --background-color: white;
+  }
+  
+  
+  header {
+    display: flex;
+    height: 70px;
+    width: 10px;
+    justify-content: space-between;
+    
+  }
+  
+  body{
+    margin: 0.5em; 
+  }
+  
+  #navbar-pinterest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em;
+  }
+  
+  .menu {
+    margin: 1em;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: medium;
+  }
+  
+  #pinterest-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .finder {
+    width: 800px;
+    height: 100%;
+    margin: 1em;
+    border: 0;
+    border-radius: 2em;
+    background-color: rgba(33, 25, 34,10%);
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding-left: 0.5em;
+  }
+  
+  #notifications, #message, #profile-img, #desplegable {
+    margin: 0.5em;
+  }
+  
+  .etiqueta {
+    margin: 1.2em;
+    text-decoration: none;
+  }
+  
+  #subMenu {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    font-weight: 600;
+    font-size: small;
+  }
+  
+  .wrapper-card {
+    padding: 1rem;
+    max-width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+    justify-content: center;
+    grid-template-rows: masonry;
+    border: 3px ;
+    gap: 0.5rem;
+  }
+  
+  
+  .card {
+    width: 236px;
+    height: 450px;
+    border-radius: 15px;
+    margin: 2rem;
+    position: relative;
+    cursor: zoom-in;
+  }
+  
+  .card img {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: lightgray;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-radius: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-out;
+  }
+  
+  .card:hover::before {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .card:hover button {
+    display: inline-flex;
+  }
+  
+  .card:hover .lowermenu {
+    display: flex;
+  }
+  
+  .card:nth-child(3n) {
+    height: 555px;
+  }
+  
+  .card:nth-child(2n + 2) {
+    height: 366px;
+  }
+  
+  .card:nth-child(5n) {
+    height: 400px;
+  }
+  
+  
+  .menu-superior {
+    position: absolute;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 25px;
+    top: 15px;
+    right: 10px;
+    border-style: none;
+    display: none;
+  }
+  
+  /* menu inferior de la carta */
+  
+  .lowermenu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 10px;
+    border-style: none;
+    text-decoration: none;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: none;
+  }
+  
+  .lowermenu ion-icon {
+    background-color: lightgray;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  
+  .lowermenu button {
+    padding: 10px;
+    background-color: lightgray;
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: none;
+  }
+  
+  .lowermenu button a {
+    text-decoration: none;
+    border-style: none;
+    color: white;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    nav {
+      display: none;
+    }
+  
+}
